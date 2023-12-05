@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Information</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        display: flex;
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: space-between;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+  <h1>System Information</h1>
+  <h2>CPU Usage</h2>
+  <div style="width: 400px;height: 200px; border: 1px dashed #333;">
+    <canvas id="cpuChart"></canvas>
+  </div>
+  <div>
+    <h2>Memory Usage</h2>
+    <p>Total Memory: <span id="totalMemory"></span> MB</p>
+    <p>Free Memory: <span id="freeMemory"></span> MB</p>
+    <p>Used Memory: <span id="usedMemory"></span> MB</p>
+    <p>Active Memory: <span id="activeMemory"></span> MB</p>
+    <p>Available Memory: <span id="availableMemory"></span> MB</p>
+  </div>
+  <div>
+    <h2>Disk Usage</h2>
+    <p>Total Space: <span id="totalDisk"></span> GB</p>
+    <p>Free Space: <span id="freeDisk"></span> GB</p>
+    <pre id="freeDisks"></pre>
+  </div>
+  <h2>Network Info</h2>
+  <div>
+      <p>Received Speed: <span id="receivedSpeed">N/A</span> bytes/sec</p>
+      <p>Sent Speed: <span id="sentSpeed">N/A</span> bytes/sec</p>
+  </div>
+  <h2>Battery Info</h2>
+<div>
+  <ul id="batteryInfo">
+  </ul>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
